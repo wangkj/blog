@@ -1,17 +1,42 @@
 body{
-  background: black;
+  background:black;
+  margin:0;
 }
 a{
   text-decoration: none;
   color: aliceblue;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+hr{
+  height: 0;
+  border: none;
+  border-top:1px solid #DEDEDE;
+}
+
+
 .clearfix::after{
   content: '';
   display: block;
   clear: both;
 }
+.banner{
+  height: 515px;
+  background-position: center center;
+  background-size: cover;
+}
 
 .topNavBar {
+  padding: 20px 0 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+}
+.topNavBar-inner{
+  padding: 0 10px;
 }
 .topNavBar .logo {
   font-family: "Hiragino Kaku Gothic Std";
@@ -61,4 +86,105 @@ a{
 
 .section2{
     color: aliceblue;
+}
+
+.userCard{
+  border: 1px solid red;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #EFFFFF;
+
+}
+
+.userCard .picture{
+  float: left;
+}
+
+.userCard .welcome{
+  background: #e6686a;
+  color:white;
+  /* display: inline-block;
+  width: 70px;
+  height: 29px;
+  line-height: 29px; 
+  写padding从内到外，方便修改，不要写宽高
+  */
+  padding:4px 16px;
+  line-height: 22px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.banner .mask{
+  height: 515px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.userCard .welcome .triangle{
+  /*绝对定位*/
+  display: block;
+  border: 10px solid transparent;
+  width: 0px;
+  border-left-color: #e6686a;
+  border-top-width: 0px;
+  position: absolute;
+  left:10px;
+  top:100%;
+}
+
+.userCard .pictureAndText {
+  padding:50px;
+}
+
+.userCard .text{
+  float: left;
+  margin-left: 65px;
+  color:aliceblue;
+  width: 400px;
+}
+.userCard .text h1{
+  margin-top:26px;
+}
+.userCard .text hr{
+  margin: 20px 0;
+}
+.userCard dl dt,
+.userCard dl dd{
+  float: left;
+  padding: 5px 0;
+}
+
+.userCard dl dt{
+  width:30%;
+  font-weight: bold;
+}
+.userCard dl dd{
+  width:70%;
+  color: #9da0a7;
+}
+.userCard >footer.media{
+  background: #e6686a;
+  text-align: center;
+}
+.userCard >footer.media >a{
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  line-height: 30px;
+  padding: 5px 0;
+  margin: 16px;
+}
+
+.userCard >footer.media >a:hover{
+  background: #CF5D5F;
+}
+.userCard icon{
+  width: 30px;
+  height: 30px;
+  
+  margin: 0 16px;
+  vertical-align: top;
+
 }
